@@ -14,7 +14,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.google.firebase:firebase-appdistribution-gradle:1.3.1'
+        classpath 'com.google.firebase:firebase-appdistribution-gradle:1.4.0'
     }
 }
 
@@ -42,57 +42,65 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = ["room.schemaLocation":
-                                     "$projectDir/schemas".toString()]
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
             }
         }
 
-        buildConfigField "String", "STORE_URL", "https://play.google.com/store/apps/details?id=mv.gov.mohiru"
-        buildConfigField "String", "PRIVACY_URL", "https://play.google.com/store/apps/details?id=mv.gov.mohiru"
+        compileOptions {
+            sourceCompatibility = JavaVersion.VERSION_1_8
+            targetCompatibility = JavaVersion.VERSION_1_8
+        }
 
-        buildConfigField "String", "FIREBASE_REGION", "asia-east2"
+        kotlinOptions {
+            jvmTarget = JavaVersion.VERSION_1_8
+        }
 
-        buildConfigField "String", "ORG", "MV_CTO"
-        buildConfigField "int", "SERVICE_FOREGROUND_NOTIFICATION_ID", 960178
-        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_ID", "Mohiru Updates"
-        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_NAME", "Mohiru Foreground Service"
+        buildConfigField "String", "STORE_URL", "\"https://play.google.com/store/apps/details?id=mv.gov.mohiru\""
+        buildConfigField "String", "PRIVACY_URL", "\"https://play.google.com/store/apps/details?id=mv.gov.mohiru\""
 
-        buildConfigField "int", "PUSH_NOTIFICATION_ID", 960179
-        buildConfigField "String", "PUSH_NOTIFICATION_CHANNEL_NAME", "Mohiru Notifications"
+        buildConfigField "String", "FIREBASE_REGION", "\"asia-east2\""
 
-        buildConfigField "long", "SCAN_DURATION", 8000
-        buildConfigField "long", "MIN_SCAN_INTERVAL", 36000
-        buildConfigField "long", "MAX_SCAN_INTERVAL", 43000
-        buildConfigField "long", "MAX_QUEUE_TIME", 7000
-        buildConfigField "long", "BM_CHECK_INTERVAL", 540000
-        buildConfigField "long", "HEALTH_CHECK_INTERVAL", 900000
-        buildConfigField "long", "PURGE_INTERVAL", 86400000
-        buildConfigField "long", "PURGE_TTL", 1814400000
-        buildConfigField "long", "CONNECTION_TIMEOUT", 6000
-        buildConfigField "long", "BLACKLIST_DURATION", 100000
+        buildConfigField "String", "ORG", "\"MV_CTO\""
+        buildConfigField "int", "SERVICE_FOREGROUND_NOTIFICATION_ID", "960178"
+        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_ID", "\"Mohiru Updates\""
+        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_NAME", "\"Mohiru Foreground Service\""
 
-        buildConfigField "long", "ADVERTISING_DURATION", 180000
-        buildConfigField "long", "ADVERTISING_INTERVAL", 5000
+        buildConfigField "String", "PUSH_NOTIFICATION_CHANNEL_NAME", "\"Mohiru Notifications\""
+        buildConfigField "int", "PUSH_NOTIFICATION_ID",     "960179"
 
-        buildConfigField "String", "V2_CHARACTERISTIC_ID", "5C2F325F-FC58-4235-8E9A-3B86FC969F1D"
+        buildConfigField "long", "SCAN_DURATION",           "8000"
+        buildConfigField "long", "MIN_SCAN_INTERVAL",       "36000"
+        buildConfigField "long", "MAX_SCAN_INTERVAL",       "43000"
+        buildConfigField "long", "MAX_QUEUE_TIME",          "7000"
+        buildConfigField "long", "BM_CHECK_INTERVAL",       "540000"
+        buildConfigField "long", "HEALTH_CHECK_INTERVAL",   "900000"
+        buildConfigField "long", "PURGE_INTERVAL",          "86400000"
+        buildConfigField "long", "PURGE_TTL",               "1814400000"
+        buildConfigField "long", "CONNECTION_TIMEOUT",      "6000"
+        buildConfigField "long", "BLACKLIST_DURATION",      "100000"
+
+        buildConfigField "long", "ADVERTISING_DURATION",    "180000"
+        buildConfigField "long", "ADVERTISING_INTERVAL",    "5000"
+
+        buildConfigField "String", "V2_CHARACTERISTIC_ID", "\"5C2F325F-FC58-4235-8E9A-3B86FC969F1D\""
 
     }
 
     buildTypes {
         debug {
-            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", "keen-bongo-274410upload"
-            buildConfigField "String", "BLE_SSID", "CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2"
+            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", "\"keen-bongo-274410upload\""
+            buildConfigField "String", "BLE_SSID", "\"CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2\""
 
-            String ssid = "CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2"
+            String ssid = "\"CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2\""
             versionNameSuffix "-debug-${getGitHash()}-${ssid.substring(ssid.length() - 5, ssid.length() - 1)}"
             resValue "string", "app_name", "OpenTrace Debug"
-            applicationIdSuffix "stg"
+            applicationIdSuffix ".stg"
         }
 
         release {
 
-            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", "keen-bongo-274410upload"          // todo: change this to production
-            buildConfigField "String", "BLE_SSID", "EC5C3477-98C9-48FC-8B3B-8FF71FCCD6C8"
+            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", "\"keen-bongo-274410upload\""          // todo: change this to production
+            buildConfigField "String", "BLE_SSID", "\"EC5C3477-98C9-48FC-8B3B-8FF71FCCD6C8\""
 
             debuggable false
             jniDebuggable false
@@ -100,7 +108,7 @@ android {
             minifyEnabled false
             multiDexEnabled false
             zipAlignEnabled true
-            resValue "string", "app_name", "OpenTrace"
+            resValue "string", "app_name", "Mohiru"
 
             lintOptions {
                 // Ignore lint errors for now
@@ -125,23 +133,23 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation group: 'androidx.localbroadcastmanager', name: 'localbroadcastmanager', version: '1.0.0-alpha3'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation group: 'androidx.localbroadcastmanager', name: 'localbroadcastmanager', version: '1.1.0-alpha01'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'pub.devrel:easypermissions:3.0.0'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.google.firebase:firebase-config-ktx:19.1.2'
-    implementation 'com.google.firebase:firebase-analytics:17.2.3'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.firebase:firebase-config-ktx:19.1.3'
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'com.google.firebase:firebase-storage:19.1.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.hbb20:ccp:2.3.4'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     // Room components
-    def room_version = "2.2.3"
+    def room_version = "2.2.5"
 
     implementation "androidx.room:room-runtime:$room_version"
     kapt "androidx.room:room-compiler:$room_version"
@@ -160,12 +168,13 @@ dependencies {
     testImplementation "androidx.room:room-testing:$room_version"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
-    implementation "com.google.android.material:material:1.2.0-alpha04"
+    implementation "com.google.android.material:material:1.2.0-alpha06"
 
     def archLifecycleVersion = "2.2.0"
     // Lifecycle components
     implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
-    kapt "androidx.lifecycle:lifecycle-compiler:$archLifecycleVersion"
+//    kapt "androidx.lifecycle:lifecycle-compiler:$archLifecycleVersion"
+    implementation "android.arch.lifecycle:common-java8:$archLifecycleVersion"
 
     // ViewModel Kotlin support
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$archLifecycleVersion"
@@ -173,10 +182,10 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
 
-    implementation 'com.google.firebase:firebase-analytics:17.2.2'
-    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
     implementation 'com.google.firebase:firebase-functions:19.0.2'
-    implementation 'com.google.firebase:firebase-messaging:20.1.2'
+    implementation 'com.google.firebase:firebase-messaging:20.1.5'
 
     //bottom navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.2.1'
