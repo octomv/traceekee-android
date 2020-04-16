@@ -93,7 +93,7 @@ android {
 
             String ssid = "\"CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2\""
             versionNameSuffix "-debug-${getGitHash()}-${ssid.substring(ssid.length() - 5, ssid.length() - 1)}"
-            resValue "string", "app_name", "OpenTrace Debug"
+            resValue "string", "app_name", "Mohiru Debug"
             applicationIdSuffix ".stg"
         }
 
