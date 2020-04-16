@@ -31,8 +31,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "io.bluetrace.opentrace"
-        resValue "string", "build_config_package", "io.bluetrace.opentrace"
+        applicationId "mv.gov.mohiru"
+        resValue "string", "build_config_package", "mv.gov.mohiru"
         minSdkVersion 22
         targetSdkVersion 29
         versionCode 41
@@ -47,43 +47,43 @@ android {
             }
         }
 
-        buildConfigField "String", "STORE_URL", STORE_URL
-        buildConfigField "String", "PRIVACY_URL", PRIVACY_URL
+        buildConfigField "String", "STORE_URL", "https://play.google.com/store/apps/details?id=mv.gov.mohiru"
+        buildConfigField "String", "PRIVACY_URL", "https://play.google.com/store/apps/details?id=mv.gov.mohiru"
 
-        buildConfigField "String", "FIREBASE_REGION", FIREBASE_REGION
+        buildConfigField "String", "FIREBASE_REGION", "asia-east2"
 
-        buildConfigField "String", "ORG", ORG
-        buildConfigField "int", "SERVICE_FOREGROUND_NOTIFICATION_ID", SERVICE_FOREGROUND_NOTIFICATION_ID
-        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_ID", SERVICE_FOREGROUND_CHANNEL_ID
-        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_NAME", SERVICE_FOREGROUND_CHANNEL_NAME
+        buildConfigField "String", "ORG", "MV_CTO"
+        buildConfigField "int", "SERVICE_FOREGROUND_NOTIFICATION_ID", 960178
+        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_ID", "Mohiru Updates"
+        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_NAME", "Mohiru Foreground Service"
 
-        buildConfigField "int", "PUSH_NOTIFICATION_ID", PUSH_NOTIFICATION_ID
-        buildConfigField "String", "PUSH_NOTIFICATION_CHANNEL_NAME", PUSH_NOTIFICATION_CHANNEL_NAME
+        buildConfigField "int", "PUSH_NOTIFICATION_ID", 960179
+        buildConfigField "String", "PUSH_NOTIFICATION_CHANNEL_NAME", "Mohiru Notifications"
 
-        buildConfigField "long", "SCAN_DURATION", SCAN_DURATION
-        buildConfigField "long", "MIN_SCAN_INTERVAL", MIN_SCAN_INTERVAL
-        buildConfigField "long", "MAX_SCAN_INTERVAL", MAX_SCAN_INTERVAL
-        buildConfigField "long", "MAX_QUEUE_TIME", MAX_QUEUE_TIME
-        buildConfigField "long", "BM_CHECK_INTERVAL", BM_CHECK_INTERVAL
-        buildConfigField "long", "HEALTH_CHECK_INTERVAL", HEALTH_CHECK_INTERVAL
-        buildConfigField "long", "PURGE_INTERVAL", PURGE_INTERVAL
-        buildConfigField "long", "PURGE_TTL", PURGE_TTL
-        buildConfigField "long", "CONNECTION_TIMEOUT", CONNECTION_TIMEOUT
-        buildConfigField "long", "BLACKLIST_DURATION", BLACKLIST_DURATION
+        buildConfigField "long", "SCAN_DURATION", 8000
+        buildConfigField "long", "MIN_SCAN_INTERVAL", 36000
+        buildConfigField "long", "MAX_SCAN_INTERVAL", 43000
+        buildConfigField "long", "MAX_QUEUE_TIME", 7000
+        buildConfigField "long", "BM_CHECK_INTERVAL", 540000
+        buildConfigField "long", "HEALTH_CHECK_INTERVAL", 900000
+        buildConfigField "long", "PURGE_INTERVAL", 86400000
+        buildConfigField "long", "PURGE_TTL", 1814400000
+        buildConfigField "long", "CONNECTION_TIMEOUT", 6000
+        buildConfigField "long", "BLACKLIST_DURATION", 100000
 
-        buildConfigField "long", "ADVERTISING_DURATION", ADVERTISING_DURATION
-        buildConfigField "long", "ADVERTISING_INTERVAL", ADVERTISING_INTERVAL
+        buildConfigField "long", "ADVERTISING_DURATION", 180000
+        buildConfigField "long", "ADVERTISING_INTERVAL", 5000
 
-        buildConfigField "String", "V2_CHARACTERISTIC_ID", V2_CHARACTERISTIC_ID
+        buildConfigField "String", "V2_CHARACTERISTIC_ID", "5C2F325F-FC58-4235-8E9A-3B86FC969F1D"
 
     }
 
     buildTypes {
         debug {
-            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", STAGING_FIREBASE_UPLOAD_BUCKET
-            buildConfigField "String", "BLE_SSID", STAGING_SERVICE_UUID
+            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", "keen-bongo-274410upload"
+            buildConfigField "String", "BLE_SSID", "CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2"
 
-            String ssid = STAGING_SERVICE_UUID
+            String ssid = "CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2"
             versionNameSuffix "-debug-${getGitHash()}-${ssid.substring(ssid.length() - 5, ssid.length() - 1)}"
             resValue "string", "app_name", "OpenTrace Debug"
             applicationIdSuffix "stg"
@@ -91,8 +91,8 @@ android {
 
         release {
 
-            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", PRODUCTION_FIREBASE_UPLOAD_BUCKET
-            buildConfigField "String", "BLE_SSID", PRODUCTION_SERVICE_UUID
+            buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", "keen-bongo-274410upload"          // todo: change this to production
+            buildConfigField "String", "BLE_SSID", "EC5C3477-98C9-48FC-8B3B-8FF71FCCD6C8"
 
             debuggable false
             jniDebuggable false
