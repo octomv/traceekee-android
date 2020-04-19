@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.Comparator
 
-class PlotActivity : AppCompatActivity() {
+class PlotActivity : LanguageActivity() {
     private var TAG = "PlotActivity"
 
     @RequiresApi(Build.VERSION_CODES.O)

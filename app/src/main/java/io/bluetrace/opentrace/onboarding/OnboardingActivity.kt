@@ -25,16 +25,15 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseException
 import com.google.firebase.FirebaseTooManyRequestsException
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.*
 import com.google.firebase.functions.FirebaseFunctions
 import com.google.firebase.functions.HttpsCallableResult
+import io.bluetrace.opentrace.*
+import io.bluetrace.opentrace.R
 import kotlinx.android.synthetic.main.activity_onboarding.*
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
-import io.bluetrace.opentrace.BuildConfig
-import io.bluetrace.opentrace.Preference
-import io.bluetrace.opentrace.R
-import io.bluetrace.opentrace.Utils
 import io.bluetrace.opentrace.idmanager.TempIDManager
 import io.bluetrace.opentrace.logging.CentralLog
 import io.bluetrace.opentrace.services.BluetoothMonitoringService
@@ -51,6 +50,8 @@ class OnboardingActivity : FragmentActivity(),
     RegisterNumberFragment.OnFragmentInteractionListener,
     OTPFragment.OnFragmentInteractionListener,
     TOUFragment.OnFragmentInteractionListener {
+
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     private var TAG: String = "OnboardingActivity"
     private var pagerAdapter: ScreenSlidePagerAdapter? = null
@@ -195,6 +196,9 @@ class OnboardingActivity : FragmentActivity(),
         pagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager)
         pager.adapter = pagerAdapter
 
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
+
+
         tabDots.setupWithViewPager(pager, true)
 
         pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
@@ -325,6 +329,7 @@ class OnboardingActivity : FragmentActivity(),
             navigateToNextPage()
         }
     }
+
 
     private fun initBluetooth() {
         checkBLESupport()
@@ -473,6 +478,7 @@ class OnboardingActivity : FragmentActivity(),
             speedUp = false
         }
     }
+
 
     fun navigateToPreviousPage() {
         CentralLog.d(TAG, "Navigating to previous page")

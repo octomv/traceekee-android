@@ -16,6 +16,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.text.HtmlCompat
 import androidx.core.view.isVisible
@@ -46,6 +47,17 @@ class HomeFragment : Fragment() {
 
     private lateinit var remoteConfig: FirebaseRemoteConfig
     private lateinit var lastKnownScanningStarted: LiveData<StatusRecord?>
+
+    private val home_anims = listOf(
+        R.drawable.home_variation_1,
+        R.drawable.home_variation_2,
+        R.drawable.home_variation_3,
+        R.drawable.home_variation_4,
+        R.drawable.home_variation_5,
+        R.drawable.home_variation_6,
+        R.drawable.home_variation_7,
+        R.drawable.home_variation_8
+    )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -88,6 +100,13 @@ class HomeFragment : Fragment() {
                 context?.startActivity(intent)
             }
         }
+
+        animation_view.setImageDrawable(
+            AppCompatResources.getDrawable(
+                animation_view.context,
+                home_anims.shuffled().take(1)[0])
+        )
+
         btn_restart_app_setup.setOnClickListener {
             var intent = Intent(context, OnboardingActivity::class.java)
             intent.putExtra("page", 3)

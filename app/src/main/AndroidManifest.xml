@@ -48,9 +48,7 @@
         <activity
             android:name=".onboarding.OnboardingActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".onboarding.HowItWorksActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".onboarding.PreOnboardingActivity"
             android:screenOrientation="portrait" />
@@ -60,6 +58,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:screenOrientation="portrait" />
 
         <receiver android:name=".boot.StartOnBootReceiver">

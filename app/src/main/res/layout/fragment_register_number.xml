@@ -6,12 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".onboarding.OnboardingActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/on_boarding_banner"
+        style="@style/OnboardingImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:lottie_rawRes="@raw/logo_traceekee_pulse"
+        android:adjustViewBounds="true"
+        app:layout_constraintWidth_percent="0.5"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        tools:srcCompat="@drawable/logo_traceekee_flat"
+        android:layout_marginTop="24dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/on_boarding_sub_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/mohir_onboarding_phone"
+        app:lottie_autoPlay="true"
+        android:layout_marginTop="15dp"
+        app:lottie_loop="true"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/topLayout"
+        app:layout_constraintTop_toBottomOf="@+id/on_boarding_banner" />
+
+
     <LinearLayout
         android:id="@+id/topLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="48dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/on_boarding_sub_banner"
         app:layout_constraintBottom_toTopOf="@+id/middleLayout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">
@@ -25,12 +62,14 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/OnboardingDesc"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/register_number_details" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            style="@style/OnboardingSubDesc"
+            style="@style/OnboardingDesc"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/register_number_family" />
@@ -41,23 +80,21 @@
         android:id="@+id/middleLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:orientation="vertical"
-        android:paddingLeft="32dp"
-        android:paddingRight="32dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topLayout">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/mobile_number_title"
-            style="@style/AppFont"
+            style="@style/OnboardingTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/mobile_number"
-            android:textColor="@color/grey_2"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:textSize="16sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,15 +102,13 @@
             android:id="@+id/country_code"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-
-            app:ccp_defaultNameCode="SG"
-            app:ccp_countryPreference="SG"
+            app:ccp_defaultNameCode="MV"
+            app:ccp_countryPreference="MV"
             app:ccp_showNameCode="false"
             app:ccp_showFullName="false"
-            app:ccp_textSize="20sp"
+            app:ccp_textSize="16sp"
+            app:ccp_customMasterCountries="MV,MY"
             app:ccp_rememberLastSelection="true"
-            app:ccp_flagBorderColor="#505050"
-
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@id/phone_number"
             app:layout_constraintBottom_toBottomOf="@id/phone_number" />
@@ -83,11 +118,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:drawableBottom="#b0b0b0"
-
             android:imeOptions="actionGo"
             android:inputType="phone"
             android:maxEms="8"
-            android:textSize="20sp"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/country_code"
@@ -104,16 +138,6 @@
             android:layout_marginLeft="2dp"
             app:layout_constraintLeft_toRightOf="@id/country_code"
             app:layout_constraintTop_toBottomOf="@id/phone_number" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:textAlignment="textStart"
-            android:text="@string/send_otp"
-            app:layout_constraintTop_toBottomOf="@+id/country_code"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

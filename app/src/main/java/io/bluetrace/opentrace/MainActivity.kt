@@ -4,17 +4,20 @@ import android.app.ActivityManager
 import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.iid.FirebaseInstanceId
-import kotlinx.android.synthetic.main.activity_main_new.*
-import io.bluetrace.opentrace.fragment.ForUseByOTCFragment
 import io.bluetrace.opentrace.fragment.HomeFragment
+import io.bluetrace.opentrace.fragment.HotlineFragment
+import io.bluetrace.opentrace.fragment.InfoFragment
+import io.bluetrace.opentrace.fragment.UploadPageFragment
 import io.bluetrace.opentrace.logging.CentralLog
+import kotlinx.android.synthetic.main.activity_main_new.*
 
-class MainActivity : AppCompatActivity() {
+
+class MainActivity : LanguageActivity() {
 
     private val TAG = "MainActivity"
 
@@ -35,6 +38,9 @@ class MainActivity : AppCompatActivity() {
                 when (item.itemId) {
                     R.id.navigation_home -> {
 
+                        nav_view.itemTextColor =AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_1)
+                        nav_view.itemIconTintList = AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_1)
+
                         if (selected != R.id.navigation_home) {
                             openFragment(
                                 LAYOUT_MAIN_ID, HomeFragment(),
@@ -45,10 +51,16 @@ class MainActivity : AppCompatActivity() {
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.navigation_upload -> {
+
+                        nav_view.itemTextColor =AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_2)
+                        nav_view.itemIconTintList = AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_2)
+
                         if (selected != R.id.navigation_upload) {
                             openFragment(
-                                LAYOUT_MAIN_ID, ForUseByOTCFragment(),
-                                ForUseByOTCFragment::class.java.name, 0
+                                LAYOUT_MAIN_ID,
+                                UploadPageFragment(),
+                                UploadPageFragment::class.java.name,
+                                0
                             )
                         }
 
@@ -56,6 +68,39 @@ class MainActivity : AppCompatActivity() {
                         return@OnNavigationItemSelectedListener true
                     }
                     R.id.navigation_help -> {
+
+                        nav_view.itemTextColor =AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_3)
+                        nav_view.itemIconTintList = AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_3)
+
+                        if (selected != R.id.navigation_help) {
+                            openFragment(
+                                LAYOUT_MAIN_ID, InfoFragment(),
+                                InfoFragment::class.java.name, 0
+                            )
+                        }
+
+                        selected = R.id.navigation_help
+                        return@OnNavigationItemSelectedListener true
+                    }
+
+                    R.id.navigation_hotline -> {
+
+                        nav_view.itemTextColor =AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_4)
+                        nav_view.itemIconTintList = AppCompatResources.getColorStateList(nav_view.context, R.color.selector_bottombar_text_4)
+
+                        if (selected != R.id.navigation_hotline) {
+                            openFragment(
+                                LAYOUT_MAIN_ID, HotlineFragment(),
+                                HotlineFragment::class.java.name, 0
+                            )
+                        }
+
+                        selected = R.id.navigation_hotline
+                        return@OnNavigationItemSelectedListener true
+                    }
+
+
+                    else -> {
                         Toast.makeText(this, "To be implemented", Toast.LENGTH_LONG).show()
                     }
                 }
@@ -67,6 +112,7 @@ class MainActivity : AppCompatActivity() {
 
         getFCMToken()
     }
+
 
     private fun getFCMToken() {
         FirebaseInstanceId.getInstance().instanceId

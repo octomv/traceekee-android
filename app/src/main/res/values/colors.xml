@@ -4,7 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="notification_tint">#499dd6</color>
+    <color name="notification_tint">#00C75E</color>
+    <color name="notification_tint_yellow">#ffb607</color>
 
     <color name="dark">#17363d</color>
     <color name="lighter">#3d5c63</color>

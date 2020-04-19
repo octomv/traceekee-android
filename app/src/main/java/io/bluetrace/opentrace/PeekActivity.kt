@@ -19,7 +19,7 @@ import io.bluetrace.opentrace.streetpass.persistence.StreetPassRecordStorage
 import io.bluetrace.opentrace.streetpass.view.RecordViewModel
 
 
-class PeekActivity : AppCompatActivity() {
+class PeekActivity : LanguageActivity() {
 
     private lateinit var viewModel: RecordViewModel
 

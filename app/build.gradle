@@ -56,16 +56,16 @@ android {
         }
 
         buildConfigField "String", "STORE_URL", "\"https://play.google.com/store/apps/details?id=mv.gov.mohiru\""
-        buildConfigField "String", "PRIVACY_URL", "\"https://play.google.com/store/apps/details?id=mv.gov.mohiru\""
+        buildConfigField "String", "PRIVACY_URL", "\"https://traceekee.netlify.app/privacy.html\""
 
         buildConfigField "String", "FIREBASE_REGION", "\"asia-east2\""
 
         buildConfigField "String", "ORG", "\"MV_CTO\""
         buildConfigField "int", "SERVICE_FOREGROUND_NOTIFICATION_ID", "960178"
-        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_ID", "\"Mohiru Updates\""
-        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_NAME", "\"Mohiru Foreground Service\""
+        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_ID", "\"TraceEkee Updates\""
+        buildConfigField "String", "SERVICE_FOREGROUND_CHANNEL_NAME", "\"TraceEkee Foreground Service\""
 
-        buildConfigField "String", "PUSH_NOTIFICATION_CHANNEL_NAME", "\"Mohiru Notifications\""
+        buildConfigField "String", "PUSH_NOTIFICATION_CHANNEL_NAME", "\"TraceEkee Notifications\""
         buildConfigField "int", "PUSH_NOTIFICATION_ID",     "960179"
 
         buildConfigField "long", "SCAN_DURATION",           "8000"
@@ -93,7 +93,7 @@ android {
 
             String ssid = "\"CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2\""
             versionNameSuffix "-debug-${getGitHash()}-${ssid.substring(ssid.length() - 5, ssid.length() - 1)}"
-            resValue "string", "app_name", "Mohiru Debug"
+            resValue "string", "app_name", "TraceEkee Debug"
             applicationIdSuffix ".stg"
         }
 
@@ -108,7 +108,7 @@ android {
             minifyEnabled false
             multiDexEnabled false
             zipAlignEnabled true
-            resValue "string", "app_name", "Mohiru"
+            resValue "string", "app_name", "TraceEkee"
 
             lintOptions {
                 // Ignore lint errors for now
