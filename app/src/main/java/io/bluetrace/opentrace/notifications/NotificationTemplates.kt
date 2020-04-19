@@ -72,7 +72,7 @@ class NotificationTemplates {
                 .setContentText(context.getText(R.string.service_not_ok_body))
                 .setOngoing(true)
                 .setPriority(Notification.PRIORITY_LOW)
-                .setSmallIcon(R.drawable.ic_notification_warning)
+                .setSmallIcon(R.drawable.ic_notification_service)
                 .setTicker(context.getText(R.string.service_not_ok_body))
                 .addAction(
                     R.drawable.ic_notification_setting,
@@ -83,7 +83,7 @@ class NotificationTemplates {
                 .setWhen(System.currentTimeMillis())
                 .setSound(null)
                 .setVibrate(null)
-                .setColor(ContextCompat.getColor(context, R.color.notification_tint))
+                .setColor(ContextCompat.getColor(context, R.color.notification_tint_yellow))
 
             return builder.build()
         }

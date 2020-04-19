@@ -30,36 +30,56 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/light_blue"
                     android:orientation="vertical"
-                    android:paddingLeft="16dp"
-                    android:paddingRight="16dp"
-                    android:paddingBottom="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="24dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
                     android:visibility="visible">
 
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/animation_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:padding="16dp"
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/on_boarding_banner"
+                        style="@style/OnboardingImage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintWidth_percent="0.5"
+                        app:lottie_autoPlay="false"
+                        app:lottie_loop="true"
+                        app:srcCompat="@drawable/traceekee_logo_shadow"
+                        android:layout_marginTop="24dp"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/ic_opentrace_blue_transparent"
-                      />
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tv_last_update"
+                        style="@style/OnboardingDesc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Last update: X:XX XX"
-                        android:textColor="@color/blue_update"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
+                        android:textColor="#828282"
                         android:visibility="invisible"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:visibility="visible"
+                        android:layout_marginTop="8dp"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@id/on_boarding_banner"
+                        app:layout_constraintBottom_toTopOf="@id/animation_view"
                         app:layout_constraintRight_toRightOf="parent"
-                        tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="272dp" />
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation_view"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        app:srcCompat="@drawable/mohir_onboarding_intro"
+                        android:layout_marginTop="8dp"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintWidth_percent="0.6"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_last_update" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -67,10 +87,16 @@
                     style="@style/OnboardingTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
                     android:text="@string/how_to_help" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     style="@style/OnboardingDesc"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="24dp"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/help_action" />
@@ -91,13 +117,12 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/light_yellow"
                     android:orientation="vertical"
                     android:paddingLeft="32dp"
                     android:paddingRight="32dp"
                     android:paddingBottom="20dp">
 
-                    <ImageView
+                    <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/imv_incomplete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -105,9 +130,10 @@
                         android:layout_marginTop="25dp"
                         android:paddingLeft="66dp"
                         android:paddingRight="66dp"
-                        android:src="@drawable/ic_opentrace_blue_transparent" />
+                        app:srcCompat="@drawable/mohir_logo_shadow" />
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/OnboardingTitle"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
@@ -117,12 +143,12 @@
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
                         android:text="@string/setup_incomplete"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
+                        android:textColor="#EB594F"
                         android:textStyle="bold"
                         android:visibility="visible" />
 
                     <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/OnboardingDesc"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
@@ -130,13 +156,13 @@
                         android:gravity="center"
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
-                        android:text="@string/help_us_identify"
-                        android:textColor="@color/black"
                         android:textSize="16sp"
+                        android:text="@string/help_us_identify"
                         android:textStyle="normal"
                         android:visibility="visible" />
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/OnboardingButton"
                         android:id="@+id/btn_restart_app_setup"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -144,12 +170,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
-                        android:background="@drawable/gradient"
                         android:minWidth="200dp"
                         android:text="@string/restart_app_setup"
-                        android:textAllCaps="false"
-                        android:textColor="#fff"
-                        android:textFontWeight="600"
                         android:textSize="16sp" />
 
                 </LinearLayout>
@@ -165,16 +187,16 @@
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/tv_title"
+                        style="@style/OnboardingTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="12dp"
-                        android:gravity="left"
+                        android:gravity="center"
                         android:paddingLeft="16dp"
+                        android:textSize="18sp"
                         android:paddingRight="16dp"
                         android:text="@string/app_permission_status"
-                        android:textColor="@color/grey_2"
-                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <androidx.cardview.widget.CardView
@@ -368,63 +390,64 @@
             </LinearLayout>
 
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/share_card_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                card_view:cardBackgroundColor="@color/light_blue"
-                card_view:cardCornerRadius="12dp"
-                card_view:cardMaxElevation="2dp"
-                card_view:cardUseCompatPadding="true"
-                card_view:contentPadding="0dp">
+                android:background="@drawable/green_rounded">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/share_ic"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:srcCompat="@drawable/ic_phone_social" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/OnboardingDesc"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="?android:selectableItemBackground"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="15dp">
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:drawableLeft="@drawable/ic_share"
-                        android:drawablePadding="10dp"
-
-                        android:gravity="left|center_vertical"
-                        android:paddingLeft="12dp"
-                        android:paddingRight="16dp"
-                        android:text="@string/share_this_app"
-                        android:textColor="@color/primary_blue_2"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/share_this_app"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/hkgrotesk_bold"
+                    app:fontFamily="@font/hkgrotesk_bold"
+                    android:id="@+id/t_sharetitle"
+                    android:layout_marginLeft="12dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toRightOf="@+id/share_ic"
+                    android:visibility="visible" />
 
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="left"
-                        android:layout_marginLeft="25dp"
-                        android:layout_weight="1"
-                        android:gravity="left|center_vertical"
-                        android:paddingLeft="12dp"
-                        android:paddingRight="16dp"
-                        android:text="@string/ask_friend"
-                        android:textColor="@color/grey_2"
-                        android:textSize="16sp"
-                        android:textStyle="normal"
-                        android:visibility="visible" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/OnboardingDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/ask_friend"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:layout_marginLeft="12dp"
+                    app:layout_constraintLeft_toRightOf="@+id/share_ic"
+                    app:layout_constraintTop_toBottomOf="@+id/t_sharetitle"
+                    android:visibility="visible" />
 
-                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </androidx.cardview.widget.CardView>
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                layout="@layout/card_image_banner" />
 
         </LinearLayout>
 

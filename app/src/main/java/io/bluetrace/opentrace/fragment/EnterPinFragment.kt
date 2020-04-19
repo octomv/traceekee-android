@@ -144,17 +144,17 @@ class EnterPinFragment : Fragment() {
                 }
         }
 
-        enterPinFragmentBackButtonLayout.setOnClickListener {
-            println("onclick is pressed")
-            var myParentFragment: UploadPageFragment = (parentFragment as UploadPageFragment)
-            myParentFragment.popStack()
-        }
-
-        enterPinFragmentBackButton.setOnClickListener {
-            println("onclick is pressed")
-            var myParentFragment: UploadPageFragment = (parentFragment as UploadPageFragment)
-            myParentFragment.popStack()
-        }
+//        enterPinFragmentBackButtonLayout.setOnClickListener {
+//            println("onclick is pressed")
+//            var myParentFragment: UploadPageFragment = (parentFragment as UploadPageFragment)
+//            myParentFragment.popStack()
+//        }
+//
+//        enterPinFragmentBackButton.setOnClickListener {
+//            println("onclick is pressed")
+//            var myParentFragment: UploadPageFragment = (parentFragment as UploadPageFragment)
+//            myParentFragment.popStack()
+//        }
     }
 
     override fun onDestroy() {

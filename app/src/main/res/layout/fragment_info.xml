@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/Widget.MaterialComponents.TabLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:tabBackground="@drawable/tab_layout_selector"
+        android:background="@drawable/background_tablayout"
+        android:layout_width="match_parent"
+        app:tabIndicatorHeight="0dp"
+        app:tabTextColor="@color/black"
+        app:tabTextAppearance="@style/OnboardingTabText"
+        app:tabPaddingStart="15dp"
+        app:tabPaddingEnd="15dp"
+        android:layout_height="42dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:text="SShSiyeet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:text="SSSSSSHIT"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:text="SSSSSSHIT"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" />-->
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        tools:background="#999"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,9 @@ object Preference {
 
     private const val LAST_PURGE_TIME = "LAST_PURGE_TIME"
 
+    private const val PREFERRED_LANG = "LANG_CODE"
+
+
     private const val ANNOUNCEMENT = "ANNOUNCEMENT"
 
     fun putHandShakePin(context: Context, value: String) {
@@ -129,4 +132,15 @@ object Preference {
         context.getSharedPreferences(PREF_ID, Context.MODE_PRIVATE)
             .unregisterOnSharedPreferenceChangeListener(listener)
     }
+
+    fun setLang(context: Context, lang: String) {
+        context.getSharedPreferences(PREF_ID, Context.MODE_PRIVATE)
+            .edit().putString(PREFERRED_LANG, lang).apply()
+    }
+
+    fun getLang(context: Context): String {
+        return context.getSharedPreferences(PREF_ID, Context.MODE_PRIVATE)
+            .getString(PREFERRED_LANG, "en")!!
+    }
+
 }

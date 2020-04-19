@@ -17,12 +17,4 @@ class UploadCompleteFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_upload_uploadcomplete, container, false)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        uploadCompleteFragmentActionButton.setOnClickListener {
-            var myParentFragment: UploadPageFragment = (parentFragment as UploadPageFragment)
-            myParentFragment.goBackToHome()
-        }
-    }
 }

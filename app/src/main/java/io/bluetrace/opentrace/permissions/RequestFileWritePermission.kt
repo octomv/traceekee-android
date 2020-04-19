@@ -3,12 +3,13 @@ package io.bluetrace.opentrace.permissions
 import android.Manifest
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import io.bluetrace.opentrace.LanguageActivity
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
 import io.bluetrace.opentrace.R
 import io.bluetrace.opentrace.Utils
 
-class RequestFileWritePermission : AppCompatActivity() {
+class RequestFileWritePermission : LanguageActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

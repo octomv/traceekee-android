@@ -7,9 +7,9 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import io.bluetrace.opentrace.onboarding.PreOnboardingActivity
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : LanguageActivity() {
 
-    private val SPLASH_TIME: Long = 2000
+    private val SPLASH_TIME: Long = 1000
     var needToUpdateApp = false
 
     private lateinit var mHandler: Handler
