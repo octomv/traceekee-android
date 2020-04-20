@@ -7,7 +7,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
 
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         style="@style/Widget.MaterialComponents.TabLayout"
@@ -45,10 +44,11 @@
         </com.google.android.material.tabs.TabLayout>
 
 
-    <androidx.viewpager.widget.ViewPager
+    <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         tools:background="#999"
         android:layout_marginTop="12dp"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/tabLayout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

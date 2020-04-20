@@ -44,7 +44,7 @@ private const val REQUEST_ENABLE_BT = 123
 private const val PERMISSION_REQUEST_ACCESS_LOCATION = 456
 private const val BATTERY_OPTIMISER = 789
 
-class OnboardingActivity : FragmentActivity(),
+class OnboardingActivity : LanguageActivity(),
     SetupFragment.OnFragmentInteractionListener,
     SetupCompleteFragment.OnFragmentInteractionListener,
     RegisterNumberFragment.OnFragmentInteractionListener,

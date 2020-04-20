@@ -27,7 +27,7 @@ class SetupFragment : OnboardingFragmentInterface() {
         }
     }
 
-    override fun getButtonText(): String = "Proceed"
+    override fun getButtonText(): String = getString(R.string.proceed)
 
     override fun onButtonClick(view: View) {
         CentralLog.d(TAG, "OnButtonClick 2")

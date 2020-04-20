@@ -56,8 +56,8 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/wrongNumber"
                 style="@style/OnboardingDesc"
-                android:fontFamily="@font/hkgrotesk_bold"
-                app:fontFamily="@font/hkgrotesk_bold"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/wrong_number"
@@ -82,9 +82,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/mobile_number"
                 android:textColor="#383838"
+                tools:text="12341231"
                 android:textSize="20sp"
-                android:fontFamily="@font/hkgrotesk_bold"
-                app:fontFamily="@font/hkgrotesk_bold"
+                android:textStyle="bold"
                 android:visibility="invisible" />
 
             <EditText
@@ -97,6 +97,8 @@
                 android:imeOptions="actionGo"
                 android:inputType="number"
                 tools:text="12345"
+                android:textDirection="rtl"
+                android:layoutDirection="rtl"
                 android:textSize="28sp"
                 android:lineSpacingExtra="12dp"
                 android:maxLength="6" />
@@ -138,11 +140,12 @@
                     style="@style/OnboardingDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your code will expire in " />
+                    android:text="@string/otp_expire_in" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/timer"
                     style="@style/OnboardingDesc"
+                    android:layout_marginStart="4dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1:59" />
@@ -156,6 +159,7 @@
                 android:gravity="center"
                 android:text="@string/resend_code"
                 android:textColor="#0D6BD1"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/hkgrotesk_bold"
                 app:fontFamily="@font/hkgrotesk_bold"/>
         </LinearLayout>

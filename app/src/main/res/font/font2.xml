@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <font
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/replicapro_bold"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/replicapro_bold" />
+
+</font-family>

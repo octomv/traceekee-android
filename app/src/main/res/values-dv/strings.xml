@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="help_action">ބަލާވެރިކަމުން ސަލާމަތްވަންދެން އެޕް ފޯނުގައި ބައިންދާ</string>
+    <string name="continue_">ކުރިޔަށް</string>
+    <string name="tv_onboarding_title">\u2009ކޯވިޑް 19 ފެތުރުން ހުއްޓުވަން ބްލޫޓޫތު ބޭނުން ކުރަމާ!</string>
+    <string name="tv_onboarding_desc">ޓްރޭސްއެކީ ބޭނުން ކޮށްގެން ބައްޔަށް ޝައްކު ކުރެވޭ މީހަކާ ގާތުން އެއްތާވެފައިވާނަމަ އެކަން ދެނެގަނެ ބޭނުންވާ އެހީއާއި ލަފާ އެޗްޕީއޭ މެދުވެރިކޮށް އަވަހަށް ދިނުމަށް ފަސޭހަވާނެ</string>
+    <string name="tv_howitworks_explanation_1">ބްލޫޓޫތު ސިގްނަލް މެދުވެރިކޮށް، މިއެޕް ބޭނުންކުރާ އެހެން މީހުންނާ ކައިރީގައިވާއިރު ދެނެގަންނާނެ</string>
+    <string name="tv_howitworks_explanation_2">ކައިރިވެފައިވާ ފޯނުތަކުގެ \"ޕްރޮކްސިމިޓީ ޑޭޓާ\" ފޯނުގައި ހުންނާނެ</string>
+    <string name="tv_howitworks_explanation_3">އެޗްޕީއޭ އިންް ޑޭޓާ އަޕްލޯޑް ކުރާނީ ތިޔަފަރާތުގެ ރުހުން ހޯދައިގެން</string>
+    <string name="begin">ފަށާ</string>
+    <string name="register_number">\u2009ފޯނު ނަންބަރު ރަޖިސްޓަރީ ކުރައްވާ</string>
+    <string name="register_number_details">ކޯވިޑް 19 އަށް ޕޮޒިޓިވްވެފައިވާ މީހަކާ ގާތުން އެއްތާވި މީހެއް ނަމަ ކަމާބެހޭ ފަރާތުން ގުޅާނެ</string>
+    <string name="register_number_family">ރަޖިސްޓަރީ ކުރަނީ އާއިލާގެ މީހެއްގެ ފަރާތުންތަ؟ އެހެންނަމަ އެމީހެއްގެ ނަންބަރު ބޭނުންކުރޭ</string>
+    <string name="mobile_number">\u2009މޯބައިލް ނަންބަރު</string>
+    <string name="get_otp">އޯޓީޕީ ކޯޑް ފޮނުވާ</string>
+    <string name="enter_otp">\u2009އޯޓީޕީ ކޯޑް</string>
+    <string name="otp_sent">\u200F6 ނަންބަރުގެ ކޯޑެއް މިހާރު ވާނީ %s އަށް ފޮނުވިފާ</string>
+    <string name="wrong_number">\u2009ފޯނުނަންބަރު ބަދަލުކުރެއްވުމަށް</string>
+    <string name="verify_otp">ކުރިޔަށް</string>
+    <string name="resend_code">ކޯޑު އަލުން ފޮނުވާ</string>
+    <string name="otp_expire_in">އޯޓީޕީ ކޯޑްގެ ވަގުތު ހަމަވާން ބާކީ</string>
+    <string name="ack_title">ތިރީގައިވާ ކަންކަމަށް ރުހުން ބޭނުންވޭ</string>
+    <string name="ack_mobile">އެޗްޕީއޭ ގެ ރަޖިސްޓަރީގައި މޯބައިލް ފޯން ނަންބަރު ހިމެނުމަށް</string>
+    <string name="ack_data">ކޯވިޑް 19 އަށް ޕޮޒިޓިވްވެފައިވާ ނުވަތަ ޝައްކުކުރެވޭ މީހަކާއި ދިމާވެފައިވާނަމަ ތިޔަފަރާތުގެ މަޢުލޫމާތު އެޗްޕީއޭ އަށް ހިއްސާކުރުމަށް</string>
+    <string name="read_privacy">ދެވޭ މަޢުލޫމާތުގެ ސިއްރު ހިފެހެއްޓޭ ގޮތުގެ ތަފްސީލް</string>
+    <string name="consent_agree">އެއްބަސްވަން</string>
+    <string name="proceed">ކުރިޔަށް</string>
+    <string name="setup_app_permission">\u2009އެޕް ސެޓަޕް ކުރުމަށް ބޭނުންވާ ހުއްދަތައް</string>
+    <string name="setup_app_permission_title">ކުރިޔަށް ގެންދިޔުމަށް “yes” ނުވަތަ “Allow” ޚިޔާރުކުރޭ</string>
+    <string name="bluetooth">1. ބްލޫޓޫތު</string>
+    <string name="location_permissions">2. ލޮކޭޝަން ޕާމިޝަންސް</string>
+    <string name="battery_optimiser_opt">3. ބެޓެރި އޮޕްޓިމައިޒާ</string>
+    <string name="push_opt">4. ޕުޝް ނޯޓިފިކޭޝަން</string>
+    <string name="notes">އެންޑްރޮއިޑް ފޯނުތަކުގައި ބްލޫޓޫތު ބޭނުންކުރުމަށް ލޮކޭޝަން ޕާމިޝަންސް ބޭނުންވޭ (ނަމަވެސް މިއެޕަށް މީހާ ހުންނަތަނުގެ މަޢުލޫމާތު ނުލިބޭނެ)</string>
+    <string name="app_permission_fully_setup">ހުއްދަތައް ސެޓަޕް ހަދާ ނިމުނީ</string>
+    <string name="app_permission_fully_setup_desc">އައުޓްބްރޭކް ނިމެންދެން  ހުއްދަތައް ދީފަ ބަހައްޓަވާ</string>
+    <string name="push_notification">ޕުޝް ނޯޓިފިކޭޝަން</string>
+    <string name="keep_push_on">ސްކޭން ނުކުރެވޭނަމަ އެޕުން އެންގުމަށް ޕުޝް ނޮޓިފިކޭޝަންސް އޮން ކުރައްވާ!</string>
+    <string name="how_to_help">\u2009ކޯވިޑް 19 ފެތުރުން ހުއްޓުވުމަށް އެހީތެރިވެދެއްވާ</string>
+    <string name="help_action">އައުޓްބްރޭކް ނިމެންދެން މިއެޕް އަބަދުވެސް ބެކްގްރައުންޑްގައި ހުޅުވާފައިވާ ބަހައްޓަވާ</string>
+    <string name="share_this_app">\u2009އެޕް ޝެއަރ ކުރުމަށް</string>
+    <string name="ask_friend">ރައްޓެހިންނާއި އާއިލާ މީހުންގެކިބައިން އައްސަވާ</string>
+    <string name="for_use_by_org">އެޗްޕީއޭގެ ބޭނުމަށް</string>
+    <string name="upload_data_for_tracing">އެއްތާވި މީހުންހޯދުމަށް ޑޭޓާ އަޕްލޯޑްކުރުން</string>
+    <string name="diclaimer_for_upload">މިހަރުފަތް ފުރިހަމަކުރަން ޖެހޭނީ ހަމައެކަނި އެޗްޕީއޭއިން ގުޅުމުން</string>
+    <string name="step_one">ހަރުފަތް 1</string>
+    <string name="verify_caller">ކޮންޓެކްޓް ޓްރޭސާރ އަކީ އެޗްޕިއޭ ތޯ ޔަގީން ކުރޭ</string>
+    <string name="verify_caller_desc">ތިރީގައިވާ ވެރިފިކޭޝަން ކޯޑާ އެއްގޮތް ކޯޑެއް ފޮނުވާތޯ ޔަގީން ކުރަންވާ</string>
+    <string name="verification_code">ވެރިފިކޭޝަން ކޯޑް</string>
+    <string name="next">ކުރިޔަށް</string>
+    <string name="step_two">ހަރުފަތް 2</string>
+    <string name="enter_pin">ޑޭޓާ އަޕްލޯޑް ކުރުމަށް އެޗް.ޕީ.އޭ އިން ދެއްވާ ޕިން ޖައްސަވާ</string>
+    <string name="upload_agreement_1">ޑޭޓާ އަޕްލޯޑް ކުރުމަކީ ފާއިތުވި 28 ދުވަހުގެ ޕްރޮކްސިމިޓީ ޑޭޓާ އެޗް ޕީ އޭ އަށް ދިނުމަށް އެއްބަސްވަން.</string>
+    <string name="upload_agreement_2">މިއެޕުން އެއްވެސް މީހެއް ހުރިތަނެއް އަދި އެއްވެސް ޒާތީ މަޢުލޫމާތެއް އެއް ނުކުރާނެ.</string>
+    <string name="thank_you">ޝުކުރިއްޔާ</string>
+    <string name="upload_data_success">މިހާރުވާނީ ހުރިހާ މަޢުލޫމާތެއް އަޕްލޯޑު ކުރެވިފާ</string>
+
+    <string name="updates">އަޕްޑޭޓްސް</string>
+    <string name="stats">ސްޓެޓްސް</string>
+    <string name="feed">ފީޑް</string>
+
+    <string name="title_home">ހޯމް</string>
+    <string name="title_upload">ފޮނުވާ</string>
+    <string name="title_help">އެހީ</string>
+    <string name="title_info">މައުލޫމާތު</string>
+    <string name="title_hotline">ހޮޓްލައިން</string>
+
+
+    <string name="setup_incomplete">ސެޓަޕް ފުރިހަމައެއް ނޫން!</string>
+    <string name="help_us_identify">ވައިރަސް ފެތުރުން ހުއްޓުވުމަށް ހުއްދަތައް ދެއްވާ!</string>
+    <string name="restart_app_setup">ސެޓަޕް ފުރިހަމަކުރައްވާ</string>
+
+    <string name="app_permission_status">ޕާމިޝަންސް ސްޓެޓަސް</string>
+
 
 </resources>

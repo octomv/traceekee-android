@@ -66,9 +66,12 @@
             android:text="@string/tv_onboarding_title"
             android:visibility="visible" />
 
-        <include layout="@layout/card_ob_1" android:visibility="gone" tools:visibility="visible"/>
+        <include layout="@layout/card_ob_1" android:visibility="gone" />
 
         <include layout="@layout/card_ob_2" android:visibility="gone"  />
+
+        <include layout="@layout/card_ob_lang" android:visibility="gone" tools:visibility="visible" />
+
 
     </LinearLayout>
 

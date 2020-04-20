@@ -6,8 +6,7 @@
     android:paddingBottom="30dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:clipToPadding="false"
-    tools:showIn="@layout/main_activity_onboarding">
+    android:clipToPadding="false">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide_textboundary"
@@ -21,12 +20,12 @@
         style="@style/OnboardingDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="left"
+        android:gravity="start"
         android:text="@string/tv_howitworks_explanation_1"
         android:visibility="visible"
-        android:paddingRight="22dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guide_textboundary"
+        android:paddingEnd="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_textboundary"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -39,9 +38,9 @@
         android:text="@string/tv_howitworks_explanation_2"
         android:visibility="visible"
         android:layout_marginTop="22dp"
-        android:paddingRight="22dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guide_textboundary"
+        android:paddingEnd="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_textboundary"
         app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
 
 
@@ -53,42 +52,42 @@
         android:text="@string/tv_howitworks_explanation_3"
         android:visibility="visible"
         android:layout_marginTop="22dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guide_textboundary"
+        android:paddingEnd="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_textboundary"
         app:layout_constraintTop_toBottomOf="@+id/tv_desc2" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="64dp"
+        android:layout_width="58dp"
         android:layout_height="0dp"
         app:lottie_rawRes="@raw/onboard_icon_1"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        tools:srcCompat="@drawable/ic_icon_hotline"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintTop_toTopOf="@id/tv_desc"
-        app:layout_constraintBottom_toBottomOf="@id/tv_desc"
-
-        app:layout_constraintLeft_toRightOf="@+id/guide_textboundary" />
+        app:layout_constraintStart_toEndOf="@+id/guide_textboundary" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="64dp"
+        android:layout_width="58dp"
         android:layout_height="0dp"
         app:lottie_rawRes="@raw/onboard_icon_2"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
+        tools:srcCompat="@drawable/ic_icon_hotline"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintTop_toTopOf="@id/tv_desc2"
-        app:layout_constraintBottom_toBottomOf="@id/tv_desc2"
-        app:layout_constraintLeft_toRightOf="@+id/guide_textboundary" />
+        app:layout_constraintStart_toEndOf="@+id/guide_textboundary" />
 
     <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="64dp"
+        android:layout_width="58dp"
         android:layout_height="0dp"
         app:lottie_rawRes="@raw/onboard_icon_3"
         app:lottie_loop="true"
         app:lottie_autoPlay="true"
+        tools:srcCompat="@drawable/ic_icon_hotline"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintTop_toTopOf="@id/tv_desc3"
-        app:layout_constraintBottom_toBottomOf="@id/tv_desc3"
-        app:layout_constraintLeft_toRightOf="@+id/guide_textboundary" />
+        app:layout_constraintStart_toEndOf="@+id/guide_textboundary" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

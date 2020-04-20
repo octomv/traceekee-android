@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ob_lang"
+    android:paddingBottom="70dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    tools:showIn="@layout/main_activity_onboarding">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_lang_title"
+        style="@style/OnboardingTitle"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/text_choose_language"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lang_btn_dv"
+        style="@style/OnboardingDesc"
+        android:layout_width="0dp"
+        android:gravity="center"
+        tools:background="@drawable/green_pill_rounded"
+        app:srcCompat="@drawable/ic_dhivehi"
+        android:padding="10dp"
+        android:layout_height="42dp"
+        android:layout_margin="30dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_lang_title" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lang_btn_en"
+        style="@style/OnboardingDesc"
+        android:layout_width="0dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/ic_english"
+        android:layout_marginTop="16dp"
+        android:layout_height="42dp"
+        android:padding="15dp"
+        app:layout_constraintWidth_percent="0.5"
+        tools:background="@drawable/green_pill_rounded"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lang_btn_dv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

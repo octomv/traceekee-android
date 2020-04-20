@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.tabs.TabLayoutMediator
+import io.bluetrace.opentrace.Preference
 import io.bluetrace.opentrace.R
 import kotlinx.android.synthetic.main.activity_plot.*
 import kotlinx.android.synthetic.main.fragment_info.*
@@ -23,34 +26,33 @@ class InfoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewPager.adapter = InfoPagerAdapter()
-        tabLayout.setupWithViewPager(viewPager)
+        viewPager.adapter = InfoPagerAdapter(view.context)
 
-    }
-
-    inner class InfoPagerAdapter(): FragmentStatePagerAdapter(childFragmentManager) {
-
-        override fun getItem(position: Int): Fragment =
-            InfoFragmentInner()
-                .apply {
-                    body = when (position) {
-                        0 -> "https://traceekee.netlify.app/updates.html"
-                        1 -> "https://traceekee.netlify.app/stats.html"
-                        2 -> "<a class='twitter-timeline' data-theme='light' href='https://twitter.com/HPA_MV?ref_src=twsrc%5Etfw'>Tweets by HPA_MV</a>" +
-                                "<script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>"
-                        else -> "https://traceekee.netlify.app/stats.html"
-                    }
-                }
-
-        override fun getCount(): Int = 3
-
-        override fun getPageTitle(position: Int): CharSequence? =
-            when (position) {
-                0 -> getString(R.string.updates)
-                1 -> getString(R.string.stats)
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> getString(R.string.stats)
+                1 -> getString(R.string.updates)
                 2 -> getString(R.string.feed)
                 else -> getString(R.string.updates)
             }
+        }.attach()
+
+    }
+
+    inner class InfoPagerAdapter(private val ctx: Context): FragmentStateAdapter(this) {
+
+        override fun createFragment(position: Int): Fragment =
+            InfoFragmentInner()
+                .apply {
+                    body = when (position) {
+                        0 -> "https://traceekee.netlify.app/stats.html?lang=${Preference.getLang(ctx)}"
+                        1 -> "https://traceekee.netlify.app/updates.html?lang=${Preference.getLang(ctx)}"
+                        2 -> "https://traceekee.netlify.app/feed.html?lang=${Preference.getLang(ctx)}"
+                        else -> "https://traceekee.netlify.app/feed.html?lang=${Preference.getLang(ctx)}"
+                    }
+                }
+
+        override fun getItemCount(): Int = 3
 
     }
 

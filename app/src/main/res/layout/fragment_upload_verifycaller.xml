@@ -75,12 +75,15 @@
                 android:id="@+id/verifyCallerFragmentVerificationCode"
                 style="@style/OnboardingTitle"
                 android:textSize="28sp"
+                android:fontFamily="@font/hkgrotesk_bold"
+                app:fontFamily="@font/hkgrotesk_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="JDEPLC" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 style="@style/OnboardingDesc"
+                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/verification_code" />

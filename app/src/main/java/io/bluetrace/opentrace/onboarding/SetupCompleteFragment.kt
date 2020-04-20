@@ -19,7 +19,7 @@ class SetupCompleteFragment : OnboardingFragmentInterface() {
     private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var mainContext: Context
 
-    override fun getButtonText(): String = "Continue"
+    override fun getButtonText(): String = getString(R.string.continue_)
 
     override fun becomesVisible() {}
 

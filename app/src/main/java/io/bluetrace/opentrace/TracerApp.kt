@@ -8,6 +8,8 @@ import io.bluetrace.opentrace.logging.CentralLog
 import io.bluetrace.opentrace.services.BluetoothMonitoringService
 import io.bluetrace.opentrace.streetpass.CentralDevice
 import io.bluetrace.opentrace.streetpass.PeripheralDevice
+import java.util.*
+
 
 class TracerApp : Application() {
 

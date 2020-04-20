@@ -140,7 +140,7 @@ object Preference {
 
     fun getLang(context: Context): String {
         return context.getSharedPreferences(PREF_ID, Context.MODE_PRIVATE)
-            .getString(PREFERRED_LANG, "en")!!
+            .getString(PREFERRED_LANG, "dv")!!
     }
 
 }

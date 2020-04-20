@@ -56,8 +56,15 @@ class HomeFragment : Fragment() {
         R.drawable.home_variation_5,
         R.drawable.home_variation_6,
         R.drawable.home_variation_7,
-        R.drawable.home_variation_8
+        R.drawable.home_variation_8,
+        R.drawable.home_variation_9,
+        R.drawable.home_variation_10,
+        R.drawable.home_variation_11,
+        R.drawable.home_variation_12,
+        R.drawable.home_variation_13
     )
+
+    //todo: change these
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
