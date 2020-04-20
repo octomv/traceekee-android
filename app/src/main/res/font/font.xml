@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <font
         app:fontStyle="normal"
         app:fontWeight="400"
-        app:font="@font/muli_regular" />
+        app:font="@font/hkgrotesk_medium"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/hkgrotesk_medium" />
     <font
         app:fontStyle="normal"
         app:fontWeight="700"
-        app:font="@font/muli_bold" />
+        app:font="@font/hkgrotesk_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        android:font="@font/hkgrotesk_bold" />
 </font-family>

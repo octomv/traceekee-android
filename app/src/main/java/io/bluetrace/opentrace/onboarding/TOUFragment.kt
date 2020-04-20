@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import io.bluetrace.opentrace.BuildConfig
+import io.bluetrace.opentrace.Preference
 import kotlinx.android.synthetic.main.fragment_tou.*
 import io.bluetrace.opentrace.R
 import io.bluetrace.opentrace.logging.CentralLog
@@ -31,7 +33,7 @@ class TOUFragment : OnboardingFragmentInterface() {
         }
     }
 
-    override fun getButtonText(): String = "I agree"
+    override fun getButtonText(): String = getString(R.string.consent_agree)
 
     override fun onUpdatePhoneNumber(num: String) {}
 
@@ -58,7 +60,7 @@ class TOUFragment : OnboardingFragmentInterface() {
         super.onViewCreated(view, savedInstanceState)
         privacy.setOnClickListener {
             CentralLog.d(TAG, "clicked the privacy safeguards")
-            val intent = Intent(mainContext, WebViewActivity::class.java)
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("${BuildConfig.PRIVACY_URL}?lang=${Preference.getLang(mainContext)}"))
             startActivity(intent)
         }
     }

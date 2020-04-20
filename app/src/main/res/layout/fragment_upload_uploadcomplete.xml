@@ -25,8 +25,8 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/OnboardingTitle"
-            android:fontFamily="@font/replicapro_bold"
-            app:fontFamily="@font/replicapro_bold"
+            android:fontFamily="@font/font2"
+            app:fontFamily="@font/font2"
             android:textAllCaps="true"
             android:textSize="24sp"
             android:layout_width="wrap_content"

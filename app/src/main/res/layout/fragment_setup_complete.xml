@@ -34,7 +34,6 @@
         app:lottie_loop="true"
         app:lottie_repeatCount="0"
         android:layout_marginTop="15dp"
-        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_title"
@@ -49,10 +48,10 @@
         android:text="@string/app_permission_fully_setup"
         android:visibility="visible"
         android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_desc"
         app:layout_constraintWidth_percent="0.75"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/on_boarding_sub_banner" />
+        app:layout_constraintRight_toRightOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_desc"
@@ -62,11 +61,12 @@
         android:gravity="center"
         android:text="@string/app_permission_fully_setup_desc"
         android:visibility="visible"
+        android:layout_marginBottom="24dp"
         android:layout_marginTop="8dp"
         app:layout_constraintWidth_percent="0.75"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+        app:layout_constraintBottom_toTopOf="@+id/share_card_view" />
 
 
         <androidx.cardview.widget.CardView
@@ -74,9 +74,9 @@
             android:layout_marginTop="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_desc"
             app:layout_constraintBottom_toTopOf="@+id/footer"
-            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintVertical_bias="0.23"
+            android:layout_marginBottom="48dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -110,6 +110,7 @@
                     android:text="@string/keep_push_on"
                     android:textColor="@color/black"
                     android:visibility="visible"
+                    android:layout_marginTop="8dp"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 

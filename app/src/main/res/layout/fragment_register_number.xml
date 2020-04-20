@@ -84,8 +84,8 @@
         android:paddingBottom="24dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topLayout">
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -107,9 +107,13 @@
             app:ccp_showNameCode="false"
             app:ccp_showFullName="false"
             app:ccp_textSize="16sp"
+            android:layoutDirection="ltr"
+            android:textDirection="ltr"
+            android:fontFamily="@font/hkgrotesk_medium"
+            app:fontFamily="@font/hkgrotesk_medium"
             app:ccp_customMasterCountries="MV,MY"
             app:ccp_rememberLastSelection="true"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/phone_number"
             app:layout_constraintBottom_toBottomOf="@id/phone_number" />
 
@@ -122,8 +126,12 @@
             android:inputType="phone"
             android:maxEms="8"
             android:textSize="16sp"
+            android:layoutDirection="ltr"
+            android:textDirection="ltr"
+            android:fontFamily="@font/hkgrotesk_bold"
+            app:fontFamily="@font/hkgrotesk_bold"
+            tools:text="192312412"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toEndOf="@+id/country_code"
             app:layout_constraintTop_toBottomOf="@id/mobile_number_title" />
 
@@ -135,8 +143,14 @@
             android:textAlignment="textStart"
             android:textColor="@color/error"
             android:visibility="invisible"
-            android:layout_marginLeft="2dp"
-            app:layout_constraintLeft_toRightOf="@id/country_code"
+            android:layout_marginStart="2dp"
+            android:layoutDirection="ltr"
+            android:textDirection="ltr"
+            tools:text="some error"
+            tools:visibility="visible"
+            android:fontFamily="@font/hkgrotesk_medium"
+            app:fontFamily="@font/hkgrotesk_medium"
+            app:layout_constraintStart_toEndOf="@id/country_code"
             app:layout_constraintTop_toBottomOf="@id/phone_number" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
