@@ -91,7 +91,7 @@
     <string name="service_not_ok_body" translatable="false">TraceEkee is not scanning.</string>
     <string name="service_not_ok_action">Check app now</string>
 
-    <string name="share_message">Join me in stopping the spread of COVID-19! Download OpenTrace. Go to: https://bluetrace.io</string>
+    <string name="share_message">Join me in stopping the spread of COVID-19! Download TraceEkee. Go to: https://trace.hpa.gov.mv/</string>
     <string name="begin">Begin</string>
     <string name="read_our">Read Our</string>
     <string name="read_privacy">Read our privacy safeguards</string>

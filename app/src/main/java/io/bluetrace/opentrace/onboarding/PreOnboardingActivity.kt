@@ -7,6 +7,7 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
 import io.bluetrace.opentrace.LanguageActivity
 import io.bluetrace.opentrace.Preference
+import io.bluetrace.opentrace.ProcessPhoenix
 import io.bluetrace.opentrace.R
 import kotlinx.android.synthetic.main.card_ob_1.*
 import kotlinx.android.synthetic.main.card_ob_2.*
@@ -46,7 +47,7 @@ class PreOnboardingActivity : LanguageActivity() {
 
     private fun setLang(lang: String) {
         Preference.setLang(this, lang)
-        recreate()
+        ProcessPhoenix.triggerRebirth(this, Intent(this, PreOnboardingActivity::class.java))
     }
 
     //type 0 = img, 1=lottie

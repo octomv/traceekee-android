@@ -106,6 +106,12 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.DebugNoActionBar" />
 
+        <activity
+            android:name=".ProcessPhoenix"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:process=":phoenix"
+            />
+
         <receiver android:name=".receivers.UpgradeReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />

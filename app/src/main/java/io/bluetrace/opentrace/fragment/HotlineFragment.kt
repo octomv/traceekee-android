@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import io.bluetrace.opentrace.Preference
 import io.bluetrace.opentrace.R
 import kotlinx.android.synthetic.main.activity_plot.*
 
@@ -24,7 +25,7 @@ class HotlineFragment : Fragment() {
             settings.domStorageEnabled = true
         }
 
-        webView.loadUrl("https://traceekee.netlify.app/hotline.html")
+        webView.loadUrl("https://trace.hpa.gov.mv/hotline.html?lang=${Preference.getLang(webView.context)}")
     }
 }
 

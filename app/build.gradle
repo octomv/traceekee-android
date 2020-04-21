@@ -56,7 +56,7 @@ android {
         }
 
         buildConfigField "String", "STORE_URL", "\"https://play.google.com/store/apps/details?id=mv.gov.mohiru\""
-        buildConfigField "String", "PRIVACY_URL", "\"https://traceekee.netlify.app/privacy.html\""
+        buildConfigField "String", "PRIVACY_URL", "\"https://trace.hpa.gov.mv/privacy.html\""
 
         buildConfigField "String", "FIREBASE_REGION", "\"asia-east2\""
 
@@ -91,6 +91,7 @@ android {
             buildConfigField "String", "FIREBASE_UPLOAD_BUCKET", "\"keen-bongo-274410upload\""
             buildConfigField "String", "BLE_SSID", "\"CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2\""
 
+            shrinkResources false
             String ssid = "\"CC60F5D3-22D4-4F62-9D78-FAF2EE0ADBA2\""
             versionNameSuffix "-debug-${getGitHash()}-${ssid.substring(ssid.length() - 5, ssid.length() - 1)}"
             resValue "string", "app_name", "TraceEkee Debug"
@@ -109,6 +110,7 @@ android {
             minifyEnabled false
             multiDexEnabled false
             zipAlignEnabled true
+            shrinkResources false
             resValue "string", "app_name", "TraceEkee"
 
             lintOptions {
