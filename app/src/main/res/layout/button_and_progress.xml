@@ -36,7 +36,6 @@
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_gravity="center_horizontal|bottom"
-            android:fontFamily="@font/font"
             android:text="@string/proceed"
             android:textAllCaps="false"
             app:cornerRadius="24dp"

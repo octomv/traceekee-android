@@ -12,6 +12,7 @@ import io.bluetrace.opentrace.MainActivity
 import io.bluetrace.opentrace.Preference
 import io.bluetrace.opentrace.R
 import io.bluetrace.opentrace.logging.CentralLog
+import kotlinx.android.synthetic.main.fragment_setup_complete.*
 
 class SetupCompleteFragment : OnboardingFragmentInterface() {
     private var listener: OnFragmentInteractionListener? = null
@@ -65,6 +66,11 @@ class SetupCompleteFragment : OnboardingFragmentInterface() {
     override fun onDetach() {
         super.onDetach()
         listener = null
+    }
+
+    override fun onResume() {
+        super.onResume()
+        on_boarding_sub_banner.playAnimation()
     }
 
     interface OnFragmentInteractionListener {

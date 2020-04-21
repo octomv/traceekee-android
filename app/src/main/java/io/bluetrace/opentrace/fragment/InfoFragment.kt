@@ -12,6 +12,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import io.bluetrace.opentrace.Preference
 import io.bluetrace.opentrace.R
+import io.bluetrace.opentrace.reduceDragSensitivity
 import kotlinx.android.synthetic.main.activity_plot.*
 import kotlinx.android.synthetic.main.fragment_info.*
 
@@ -37,6 +38,8 @@ class InfoFragment : Fragment() {
             }
         }.attach()
 
+        viewPager.reduceDragSensitivity()
+
     }
 
     inner class InfoPagerAdapter(private val ctx: Context): FragmentStateAdapter(this) {
@@ -45,10 +48,10 @@ class InfoFragment : Fragment() {
             InfoFragmentInner()
                 .apply {
                     body = when (position) {
-                        0 -> "https://traceekee.netlify.app/stats.html?lang=${Preference.getLang(ctx)}"
-                        1 -> "https://traceekee.netlify.app/updates.html?lang=${Preference.getLang(ctx)}"
-                        2 -> "https://traceekee.netlify.app/feed.html?lang=${Preference.getLang(ctx)}"
-                        else -> "https://traceekee.netlify.app/feed.html?lang=${Preference.getLang(ctx)}"
+                        0 -> "https://trace.hpa.gov.mv/stats.html?lang=${Preference.getLang(ctx)}"
+                        1 -> "https://trace.hpa.gov.mv/updates.html?lang=${Preference.getLang(ctx)}"
+                        2 -> "https://trace.hpa.gov.mv/feed.html?lang=${Preference.getLang(ctx)}"
+                        else -> "https://trace.hpa.gov.mv/feed.html?lang=${Preference.getLang(ctx)}"
                     }
                 }
 

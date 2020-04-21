@@ -64,8 +64,6 @@ class HomeFragment : Fragment() {
         R.drawable.home_variation_13
     )
 
-    //todo: change these
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val db = StreetPassRecordDatabase.getDatabase(view.context)

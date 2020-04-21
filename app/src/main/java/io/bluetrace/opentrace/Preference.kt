@@ -135,7 +135,7 @@ object Preference {
 
     fun setLang(context: Context, lang: String) {
         context.getSharedPreferences(PREF_ID, Context.MODE_PRIVATE)
-            .edit().putString(PREFERRED_LANG, lang).apply()
+            .edit().putString(PREFERRED_LANG, lang).commit()
     }
 
     fun getLang(context: Context): String {
