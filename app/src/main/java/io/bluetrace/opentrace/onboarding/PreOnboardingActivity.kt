@@ -43,6 +43,8 @@ class PreOnboardingActivity : LanguageActivity() {
 
         lang_btn_dv.setOnClickListener { setLang("dv") }
         lang_btn_en.setOnClickListener { setLang("en") }
+        lang_btn_bn.setOnClickListener { setLang("bn") }
+
     }
 
     private fun setLang(lang: String) {

@@ -5,8 +5,7 @@
     android:id="@+id/ob_content1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:showIn="@layout/main_activity_onboarding">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatTextView
         style="@style/OnboardingDesc"

@@ -50,5 +50,20 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lang_btn_dv" />
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/lang_btn_bn"
+        style="@style/OnboardingDesc"
+        android:layout_width="0dp"
+        android:gravity="center"
+        app:srcCompat="@drawable/ic_bengali"
+        android:layout_marginTop="16dp"
+        android:layout_height="42dp"
+        android:padding="15dp"
+        app:layout_constraintWidth_percent="0.5"
+        tools:background="@drawable/green_pill_rounded"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lang_btn_en" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

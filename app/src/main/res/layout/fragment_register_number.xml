@@ -32,7 +32,6 @@
         app:lottie_loop="true"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintVertical_bias="0"
-        app:layout_constraintWidth_percent="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/topLayout"
@@ -86,6 +85,7 @@
         android:paddingRight="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footer"
         app:layout_constraintTop_toBottomOf="@+id/topLayout">
 
         <androidx.appcompat.widget.AppCompatTextView

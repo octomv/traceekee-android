@@ -103,7 +103,7 @@
     <string name="verify_caller_desc">Make sure they give you a code that matches the one below</string>
     <string name="verification_code">Verification Code</string>
     <string name="next">Next</string>
-    <string name="enter_pin">Enter PIN to upload</string>
+    <string name="enter_pin">Enter PIN provided by HPA to upload</string>
     <string name="step_two">STEP 2</string>
     <string name="invalid_pin">Invalid PIN</string>
     <string name="upload_data_success">Your data has been uploaded successfully</string>
