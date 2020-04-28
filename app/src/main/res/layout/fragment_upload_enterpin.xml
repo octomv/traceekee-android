@@ -14,8 +14,11 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/middle"
+            app:layout_constraintVertical_chainStyle="spread_inside"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintVertical_bias="0"
             android:layout_weight="3"
             android:orientation="vertical">
 
@@ -35,48 +38,53 @@
         </LinearLayout>
 
 
-        <androidx.appcompat.widget.AppCompatEditText
-            style="@style/OnboardingTitle"
+        <LinearLayout
+            android:id="@+id/middle"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/thisshit"
             app:layout_constraintBottom_toTopOf="@+id/thisothershit"
-            android:id="@+id/enterPinFragmentUploadCode"
-            android:fontFamily="@font/hkgrotesk_bold"
-            app:fontFamily="@font/hkgrotesk_bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:imeOptions="actionGo"
-            android:hint="000000"
-            android:maxLength="6"
-            app:layout_constraintVertical_bias="0.2"
-            android:gravity="center"
-            tools:text="123456"
-            android:textSize="28sp" />
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/OnboardingDesc"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/enterPinFragmentUploadCode"
-            android:fontFamily="@font/hkgrotesk_medium"
-            app:fontFamily="@font/hkgrotesk_medium"
-            android:id="@+id/enterPinFragmentErrorMessage"
-            android:gravity="center"
-            tools:visibility="visible"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="@string/invalid_pin"
-            android:textColor="#C20000"
-            android:textSize="16sp"
-            android:visibility="invisible" />
+            <androidx.appcompat.widget.AppCompatEditText
+                style="@style/OnboardingTitle"
+                android:id="@+id/enterPinFragmentUploadCode"
+                android:fontFamily="@font/hkgrotesk_bold"
+                app:fontFamily="@font/hkgrotesk_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionGo"
+                android:hint="000000"
+                android:maxLength="6"
+                android:gravity="center"
+                tools:text="123456"
+                android:textSize="28sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/OnboardingDesc"
+                android:fontFamily="@font/hkgrotesk_medium"
+                app:fontFamily="@font/hkgrotesk_medium"
+                android:id="@+id/enterPinFragmentErrorMessage"
+                android:gravity="center"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/invalid_pin"
+                android:textColor="#C20000"
+                android:textSize="16sp"
+                android:visibility="invisible" />
+        </LinearLayout>
 
 
         <LinearLayout
             android:id="@+id/thisothershit"
-            app:layout_constraintBottom_toTopOf="@id/enterPinActionButton"
+            app:layout_constraintBottom_toTopOf="@+id/enterPinActionButton"
+            app:layout_constraintTop_toBottomOf="@+id/middle"
+            app:layout_constraintVertical_bias="1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginBottom="15dp"

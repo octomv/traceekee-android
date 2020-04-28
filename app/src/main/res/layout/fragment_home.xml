@@ -132,7 +132,7 @@
                         android:layout_marginTop="25dp"
                         android:paddingLeft="66dp"
                         android:paddingRight="66dp"
-                        app:srcCompat="@drawable/mohir_logo_shadow" />
+                        app:srcCompat="@drawable/traceekee_logo_shadow" />
 
 
                     <androidx.appcompat.widget.AppCompatTextView

@@ -1,101 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="28dp"
-        android:paddingRight="28dp"
-        android:paddingBottom="28dp"
-        android:layout_height="match_parent"
-        android:background="#F2C94C">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/on_boarding_banner"
-            style="@style/OnboardingImage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            app:layout_constraintWidth_percent="0.4"
-            app:srcCompat="@drawable/logo_traceekee_white"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-
-        <LinearLayout
-            android:id="@+id/topLayout"
-            app:layout_constraintTop_toBottomOf="@+id/on_boarding_banner"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="28dp">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/OnboardingTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/for_use_by_org" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                style="@style/OnboardingDesc"
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/upload_data_for_tracing" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/fragment_placeholder_layout"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="10"
-            android:layout_marginTop="28dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topLayout"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <FrameLayout
-                android:id="@+id/fragment_placeholder"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-        </LinearLayout>
-
-        <TextView
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:visibility="gone"
-            android:id="@+id/fragment_buildno"
-            android:layout_width="match_parent"
-            android:gravity="center"
-            android:layout_height="30dp"
-            tools:text="test" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 
     <FrameLayout
-        android:id="@+id/uploadPageFragmentLoadingProgressBarFrame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.5"
-        android:animateLayoutChanges="true"
-        android:background="#000000"
-        android:visibility="invisible">
+        android:orientation="vertical"
+        android:layout_height="match_parent">
 
-        <ProgressBar
-            android:id="@+id/loadingProgressBar"
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:paddingBottom="28dp"
+            android:layout_height="match_parent"
+            android:background="#F2C94C">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/on_boarding_banner"
+                style="@style/OnboardingImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintWidth_percent="0.4"
+                app:srcCompat="@drawable/logo_traceekee_white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+
+            <LinearLayout
+                android:id="@+id/topLayout"
+                app:layout_constraintTop_toBottomOf="@+id/on_boarding_banner"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="28dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/OnboardingTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/for_use_by_org" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/OnboardingDesc"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_data_for_tracing" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_placeholder_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:layout_marginTop="28dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topLayout"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <FrameLayout
+                    android:id="@+id/fragment_placeholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <TextView
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"
+                android:id="@+id/fragment_buildno"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="30dp"
+                tools:text="test" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/uploadPageFragmentLoadingProgressBarFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:animateLayoutChanges="true"
+            android:background="#000000"
+            android:visibility="invisible">
+
+            <ProgressBar
+                android:id="@+id/loadingProgressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
     </FrameLayout>
-</FrameLayout>
+</androidx.core.widget.NestedScrollView>

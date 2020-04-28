@@ -6,46 +6,52 @@
     android:layout_height="match_parent"
     tools:context=".onboarding.OnboardingActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+    <androidx.core.widget.NestedScrollView
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/footer">
-
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/on_boarding_banner"
-            style="@style/OnboardingImage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:lottie_rawRes="@raw/logo_traceekee_pulse"
-            android:adjustViewBounds="true"
-            app:layout_constraintWidth_percent="0.5"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            tools:srcCompat="@drawable/logo_traceekee_flat"
-            android:layout_marginTop="24dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/on_boarding_sub_banner"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            app:srcCompat="@drawable/mohir_consent_1"
-            app:lottie_autoPlay="true"
-            android:layout_marginTop="15dp"
-            app:lottie_loop="true"
-            app:layout_constraintDimensionRatio="1:1"
-            app:layout_constraintVertical_bias="0"
-            app:layout_constraintWidth_percent="0.5"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/on_onboarding_container"
-            app:layout_constraintTop_toBottomOf="@+id/on_boarding_banner" />
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fillViewport="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/on_boarding_banner"
+                style="@style/OnboardingImage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:lottie_rawRes="@raw/logo_traceekee_pulse"
+                android:adjustViewBounds="true"
+                app:layout_constraintWidth_percent="0.5"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                tools:srcCompat="@drawable/logo_traceekee_flat"
+                android:layout_marginTop="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/on_boarding_sub_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:srcCompat="@drawable/mohir_consent_1"
+                app:lottie_autoPlay="true"
+                android:layout_marginTop="15dp"
+                app:lottie_loop="true"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintWidth_percent="0.5"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/on_onboarding_container"
+                app:layout_constraintTop_toBottomOf="@+id/on_boarding_banner" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/on_onboarding_container"
                 app:layout_constraintTop_toBottomOf="@+id/on_boarding_sub_banner"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -121,22 +127,23 @@
                     app:srcCompat="@drawable/ic_masked_emote" />
 
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacy"
+                style="@style/OnboardingDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/read_privacy"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/privacy"
-            style="@style/OnboardingDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/read_privacy"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"
-            android:layout_marginBottom="15dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 
     <FrameLayout
         android:id="@+id/footer"

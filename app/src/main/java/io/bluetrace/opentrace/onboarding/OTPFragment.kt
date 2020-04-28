@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
+import androidx.core.text.BidiFormatter
 import androidx.core.text.HtmlCompat
 import kotlinx.android.synthetic.main.fragment_otp.*
 import io.bluetrace.opentrace.Preference
