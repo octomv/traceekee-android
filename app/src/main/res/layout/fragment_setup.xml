@@ -47,9 +47,7 @@
                 app:lottie_autoPlay="true"
                 android:layout_marginTop="15dp"
                 app:lottie_loop="true"
-                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintVertical_bias="0"
-                app:layout_constraintWidth_percent="0.5"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toTopOf="@+id/on_onboarding_container"
@@ -66,7 +64,8 @@
                 android:paddingLeft="24dp"
                 android:paddingRight="24dp"
                 android:layout_width="0dp"
-                android:layout_height="0dp">
+                android:paddingBottom="24dp"
+                android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tv_title"
@@ -148,6 +147,7 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.core.widget.NestedScrollView>
 
     <FrameLayout

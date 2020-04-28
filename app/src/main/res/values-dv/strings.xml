@@ -43,7 +43,7 @@
     <string name="upload_data_for_tracing">އެއްތާވި މީހުންހޯދުމަށް ޑޭޓާ އަޕްލޯޑްކުރުން</string>
     <string name="diclaimer_for_upload">މިހަރުފަތް ފުރިހަމަކުރަން ޖެހޭނީ ހަމައެކަނި އެޗްޕީއޭއިން ގުޅުމުން</string>
     <string name="step_one">ހަރުފަތް 1</string>
-    <string name="verify_caller">ކޮންޓެކްޓް ޓްރޭސާރ އަކީ އެޗްޕިއޭ ތޯ ޔަގީން ކުރޭ</string>
+    <string name="verify_caller">ކޮންޓެކްޓް ޓްރޭސާރ އަކީ އެޗްޕީއޭ ތޯ ޔަގީން ކުރޭ</string>
     <string name="verify_caller_desc">ތިރީގައިވާ ވެރިފިކޭޝަން ކޯޑާ އެއްގޮތް ކޯޑެއް ފޮނުވާތޯ ޔަގީން ކުރަންވާ</string>
     <string name="verification_code">ވެރިފިކޭޝަން ކޯޑް</string>
     <string name="next">ކުރިޔަށް</string>

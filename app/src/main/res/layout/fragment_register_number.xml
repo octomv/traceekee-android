@@ -30,7 +30,6 @@
         app:lottie_autoPlay="true"
         android:layout_marginTop="15dp"
         app:lottie_loop="true"
-        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

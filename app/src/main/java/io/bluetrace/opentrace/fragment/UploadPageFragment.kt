@@ -31,8 +31,8 @@ class UploadPageFragment : Fragment() {
 
         var uuidString = BuildConfig.BLE_SSID
 
-        uuidString = uuidString.substring(uuidString.length - 4)
-        fragment_buildno.text = "${BuildConfig.GITHASH}-${uuidString}"
+//        uuidString = uuidString.substring(uuidString.length - 4)
+//        fragment_buildno.text = "${BuildConfig.GITHASH}-${uuidString}"
         val childFragMan: FragmentManager = childFragmentManager
         val childFragTrans: FragmentTransaction = childFragMan.beginTransaction()
         val fragB = VerifyCallerFragment()
