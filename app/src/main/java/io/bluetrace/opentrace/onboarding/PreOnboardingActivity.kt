@@ -48,8 +48,10 @@ class PreOnboardingActivity : LanguageActivity() {
     }
 
     private fun setLang(lang: String) {
-        Preference.setLang(this, lang)
-        ProcessPhoenix.triggerRebirth(this, Intent(this, PreOnboardingActivity::class.java))
+        if(Preference.getLang(this) != lang) {
+            Preference.setLang(this, lang)
+            ProcessPhoenix.triggerRebirth(this, Intent(this, PreOnboardingActivity::class.java))
+        }
     }
 
     //type 0 = img, 1=lottie
